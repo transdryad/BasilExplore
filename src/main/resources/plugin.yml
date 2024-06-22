@@ -1,0 +1,5 @@
+name: BasilExplore
+version: '${version}'
+main: io.github.transdryad.basilexplore.BasilExplore
+api-version: '1.20.6'
+author: Transdryad
