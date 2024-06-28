@@ -4,7 +4,6 @@ main: io.github.transdryad.basilexplore.BasilExplore
 api-version: '1.20.6'
 author: Transdryad
 commands:
-  kit:
-    description: Gives a player the standard BasilCraft Starter Kit.
-    usage: /kit
-    permission: basilExplore.starterKit
+  home:
+    description: Teleport player to their home in future.
+    usage: /<command>
