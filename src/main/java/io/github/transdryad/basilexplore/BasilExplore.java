@@ -8,6 +8,7 @@ public final class BasilExplore extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         getServer().getPluginManager().registerEvents(new BasilListener(), this);
+        this.getCommand("kit").setExecutor( new CommandKit());
 
     }
 
