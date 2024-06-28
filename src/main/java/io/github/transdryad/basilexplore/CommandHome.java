@@ -1,5 +1,3 @@
-//The command logic for giving people starter kits.
-
 package io.github.transdryad.basilexplore;
 
 import org.bukkit.Location;
@@ -8,6 +6,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.logging.Level;
 
 public class CommandHome implements CommandExecutor {
     JavaPlugin plugin = BasilExplore.getPlugin(BasilExplore.class);
@@ -19,12 +19,10 @@ public class CommandHome implements CommandExecutor {
                     Location PlayerLocation = player.getLocation();
                     player.sendMessage("This plugin is running the config version " + plugin.getConfig().getString("config_version"));
                     if (args.length == 0) {
-                        player.sendMessage(
-                                player.getName() + " ran this command from " + PlayerLocation.getBlockX() + ", " + PlayerLocation.getBlockY() + ", " + PlayerLocation.getBlockZ() + " without arguments."
-                        );
+                        plugin.getLogger().log(Level.INFO,player.getName() + " ran /home from " + PlayerLocation.getBlockX() + ", " + PlayerLocation.getBlockY() + ", " + PlayerLocation.getBlockZ() + ".");
                     }
                     else if (args[0].equalsIgnoreCase("set")) {
-                        player.sendMessage(player.getName() + " ran /home set");
+                        plugin.getLogger().log(Level.INFO, player.getName() + " ran /home set from " + PlayerLocation.getBlockX() + ", " + PlayerLocation.getBlockY() + ", " + PlayerLocation.getBlockZ() + ".");
                     }
 
                     return true;
