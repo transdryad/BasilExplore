@@ -11,8 +11,8 @@ public final class BasilExplore extends JavaPlugin {
         // Plugin startup logic
         super.onEnable();
         this.getLogger().log(Level.INFO, "Enabling BasilExplore.");
-        getLogger().log(Level.INFO, "Logging in a different way.");
         this.saveDefaultConfig();
+        getLogger().log(Level.INFO, "Logging in a different way.");
         FileConfiguration config = this.getConfig();
         getServer().getPluginManager().registerEvents(new BasilListener(), this);
         this.getCommand("home").setExecutor( new CommandHome());
