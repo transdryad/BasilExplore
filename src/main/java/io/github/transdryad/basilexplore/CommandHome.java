@@ -9,8 +9,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Level;
 
-import io.github.transdryad.basilexplore.Home;
-
 public class CommandHome implements CommandExecutor {
     Home home = new Home();
     JavaPlugin plugin = BasilExplore.getPlugin(BasilExplore.class);
@@ -20,7 +18,7 @@ public class CommandHome implements CommandExecutor {
                 if (sender instanceof Player) {
                     Player player = (Player) sender;
                     Location PlayerLocation = player.getLocation();
-                    player.sendMessage("This plugin is running the config version " + plugin.getConfig().getString("config_version"));
+                    //player.sendMessage("This plugin is running the config version " + plugin.getConfig().getString("config_version"));
                     if (args.length == 0) {
                         plugin.getLogger().log(Level.INFO,player.getName() + " ran /home from " + PlayerLocation.getBlockX() + ", " + PlayerLocation.getBlockY() + ", " + PlayerLocation.getBlockZ() + ".");
                         try {
