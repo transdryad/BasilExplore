@@ -4,6 +4,7 @@ import org.ajbrown.namemachine.NameGenerator;
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.EntitySpawnEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
@@ -26,5 +27,9 @@ public class BasilListener implements Listener {
         if (event.getEntityType() == EntityType.VILLAGER) {
             Villagers.villagerDeath(event.getEntity());
         }
+    }
+    @EventHandler
+    public void onBreakBlock(BlockBreakEvent event) {
+
     }
 }
